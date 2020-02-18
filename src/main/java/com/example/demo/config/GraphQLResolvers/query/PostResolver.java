@@ -1,6 +1,4 @@
-package com.example.demo.config.GraphQLResolvers;
-
-import java.util.Optional;
+package com.example.demo.config.GraphQLResolvers.query;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -14,8 +12,8 @@ public class PostResolver implements GraphQLResolver<Post> {
 	@Autowired
 	private AuthorService authorService;
 
-	public Optional<Author> getAuthor(Post post) {
-		return Optional.ofNullable(authorService.findAuthrById(post.getAuthor().getId()));
+	public Author getAuthor(Post post) {
+		return authorService.findAuthrById(post.getAuthor().getId());
 	}
 
 }

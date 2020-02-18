@@ -23,6 +23,20 @@ public class GraphQlEx1Application implements CommandLineRunner {
 		SpringApplication.run(GraphQlEx1Application.class, args);
 	}
 
+//	@Bean
+//    GraphQLSchema schema() {
+//        return GraphQLSchema.newSchema()
+//            .query(GraphQLObjectType.newObject()
+//                .name("query")
+//                .field(field -> field
+//                    .name("test")
+//                    .type(Scalars.GraphQLString)
+//                    .dataFetcher(environment -> "response")
+//                )
+//                .build())
+//            .build();
+//    }
+	
 	@Autowired
 	AuthorService authorService;
 

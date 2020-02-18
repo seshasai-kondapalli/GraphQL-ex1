@@ -1,4 +1,4 @@
-package com.example.demo.config.GraphQLResolvers;
+package com.example.demo.config.GraphQLResolvers.query;
 
 import java.util.List;
 

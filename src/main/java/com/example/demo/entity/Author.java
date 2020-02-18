@@ -26,8 +26,11 @@ public class Author {
 	@Column(name = "id")
 	private Long id;
 
-	@Column(name = "name")
+	@Column(name = "name", insertable = false, updatable = false)
 	private String name;
+
+	@Column(name = "name")
+	private String thumbnail;
 
 	@OneToMany(mappedBy = "author")
 	private List<Post> posts;

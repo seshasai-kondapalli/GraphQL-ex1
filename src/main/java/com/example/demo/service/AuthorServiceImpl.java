@@ -31,7 +31,7 @@ public class AuthorServiceImpl implements AuthorService {
 	@Transactional(readOnly = true)
 	public Author findAuthrById(Long id) {
 		// TODO Auto-generated method stub
-		return authorRepository.findById(id).orElse(null);
+		return authorRepository.findById(id).get();
 	}
 
 	@Override
